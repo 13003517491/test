@@ -1,0 +1,27 @@
+# \u670D\u52A1\u914D\u7F6E
+server:
+  port: 8080 # \u670D\u52A1\u7AEF\u53E3
+  servlet:
+    jsp:
+      init-parameters:
+        development: true # \u5F00\u542FJSP\u8C03\u8BD5\u6A21\u5F0F\uFF0C\u4FEE\u6539JSP\u65E0\u9700\u91CD\u542F
+    context-path: /zjq # \u4E0A\u4E0B\u6587\u8DEF\u5F84
+
+# Spring MVC \u914D\u7F6E
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/page/ # \u9875\u9762\u524D\u7F00
+      suffix: .jsp # \u9875\u9762\u540E\u7F00
+  # \u6570\u636E\u5E93\u8FDE\u63A5\u4FE1\u606F
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ssm?characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&useSSL=false
+# Mybatis-Plus \u914D\u7F6E
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml # Mapper XML \u626B\u5305\u8DEF\u5F84
+  type-aliases-package: com.dj.ssm.pojo # \u7C7B\u522B\u540D
+  configuration:
+    map-underscore-to-camel-case: true
