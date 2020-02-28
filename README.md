@@ -1,2 +1,3 @@
 # test
 study
+idea add
